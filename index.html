@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Not a Chat Room</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="heading-container">
+                <h2 class="heading">Welcome to Chat Room</h2>
+            </div>
+            <div class="rooms-container">
+                <button class="btn room general active-room">#general</button>
+                <button class="btn room gaming">#gaming</button>
+                <button class="btn room music">#music</button>
+                <button class="btn room recipes">#recipes</button>
+            </div>
+            <div class="messages">
+                <ul class="message-list">
+                   
+                </ul>
+            </div>
+            <div class="change-alert"></div>
+            <div class="input-container">
+                <form action="#" class="sendm form">
+                    <span class="pre-message">New message</span>
+                    <input type="text" class="message input" placeholder="Type...">
+                    <input type="submit" class="btn btn-lg" value="Send">
+                </form>
+                <form action="#" class="sendc form">
+                    <span class="pre-message">Change Name</span>
+                    <input type="text" class="change input" placeholder="Type...">
+                    <input type="submit" class="btn btn-lg" value="Change">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBzyNybKJrl3Z-eURT9rq9RJ3Km1WBDaMw",
+          authDomain: "dummy-project-242d5.firebaseapp.com",
+          databaseURL: "https://dummy-project-242d5.firebaseio.com",
+          projectId: "dummy-project-242d5",
+          storageBucket: "dummy-project-242d5.appspot.com",
+          messagingSenderId: "409659556203",
+          appId: "1:409659556203:web:6e6feb2c060627b44c8c2e",
+          measurementId: "G-NG615J27CY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="scripts/chatroom.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
